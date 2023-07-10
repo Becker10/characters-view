@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJETO X-MEN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Oxanium:wght@300;400;700&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,400&family=Rock+Salt&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+</head>
+
+<body>
+  <header class="initial">
+    <img class="logo" src="./src/assets/logo.svg" alt="logo">
+  </header>
+
+  <main class="character-select">
+    <section class="characters">
+      <h1 class="title-character">Select a Character</h1>
+      <ul class="list-character">
+        <li class="character select" id="ciclops" data-name="Ciclops" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.1"> 
+          <img src="./src/assets/card-ciclope.jpg" alt="">
+        </li>
+        <li class="character" id="jean" data-name="Jean Grey" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.2">
+          <img src="./src/assets/card-jean-grey.jpg" alt="">
+        </li>
+        <li class="character" id="lince" data-name="Black Lince" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.3">
+          <img src="./src/assets/card-lince-negra.jpg" alt="">
+        </li>
+        <li class="character" id="magnet" data-name="Magnet" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.4">
+          <img src="./src/assets/card-magneto.jpg" alt="">
+        </li>
+        <li class="character" id="nocturnal" data-name="Nocturnal" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.5">
+          <img src="./src/assets/card-noturno.jpg" alt="">
+        </li>
+        <li class="character" id="storm" data-name="Storm" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.6">
+          <img src="./src/assets/card-tempestade.jpg" alt="">
+        </li>
+        <li class="character" id="vampire" data-name="Vampire" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.7">
+          <img src="./src/assets/card-vampira.jpg" alt="">
+        </li>
+        <li class="character" id="wolverine" data-name="Wolverine" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.8">
+          <img src="./src/assets/card-wolverine.jpg" alt="">
+        </li>
+      </ul>
+    </section>
+    <section class="character-active">
+      <img class="character-big" src="./src/assets/card-ciclops.png" alt="">
+
+      <div class="info-character">
+        <h2 class="info-name-character" id="name-character">Cyclops</h2>
+        <p class="info-describes" id="describes-character">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.1</p>
+      </div>
+    </section>
+  </main>
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>

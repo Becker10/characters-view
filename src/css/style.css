@@ -1,0 +1,80 @@
+body {
+    font-family: "Oxanium" , cursive;
+    background-color: #000000;
+    color: #ffffff;
+}
+body::before {
+    content: "";
+    background-image: url(../assets/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+.initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.character-select {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+}
+.character-select .characters {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 585px;
+    gap: 25px;
+}
+.character-select .characters .title-character{
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #47f4ff;
+    width: 100%;
+    /* text-align: center; */
+}
+.character-select .list-character {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.list-character .character img {
+    width: 100%;
+    height: 100%;
+}
+
+.list-character .character.select{
+    box-shadow: 0px 0px 24px 5px #0271f7;
+}
+.character-active {
+    text-align: center;
+    max-height: 530px;
+}
+.character-active .character-big{
+    width: 430px;
+    height: 430px;
+}
+.character-active .info-name-character{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.character-active .info-describes{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
