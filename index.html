@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROJETO X-MEN</title>
+  <title>NARUTO SHIPPUDEN</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Oxanium:wght@300;400;700&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,400&family=Rock+Salt&display=swap"
-    rel="stylesheet">
-
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/responsive.css">
+  <style>
+    @font-face {
+      font-family: "NarutoV2";
+      src: url("./src/fonts/njnaruto.ttf");
+    }
+  </style>
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
 </head>
 
 <body>
@@ -23,44 +25,152 @@
 
   <main class="character-select">
     <section class="characters">
-      <h1 class="title-character">Select a Character</h1>
-      <ul class="list-character">
-        <li class="character select" id="ciclops" data-name="Ciclops" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.1"> 
-          <img src="./src/assets/card-ciclope.jpg" alt="">
-        </li>
-        <li class="character" id="jean" data-name="Jean Grey" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.2">
-          <img src="./src/assets/card-jean-grey.jpg" alt="">
-        </li>
-        <li class="character" id="lince" data-name="Black Lince" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.3">
-          <img src="./src/assets/card-lince-negra.jpg" alt="">
-        </li>
-        <li class="character" id="magnet" data-name="Magnet" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.4">
-          <img src="./src/assets/card-magneto.jpg" alt="">
-        </li>
-        <li class="character" id="nocturnal" data-name="Nocturnal" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.5">
-          <img src="./src/assets/card-noturno.jpg" alt="">
-        </li>
-        <li class="character" id="storm" data-name="Storm" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.6">
-          <img src="./src/assets/card-tempestade.jpg" alt="">
-        </li>
-        <li class="character" id="vampire" data-name="Vampire" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.7">
-          <img src="./src/assets/card-vampira.jpg" alt="">
-        </li>
-        <li class="character" id="wolverine" data-name="Wolverine" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.8">
-          <img src="./src/assets/card-wolverine.jpg" alt="">
-        </li>
+      <h1 class="title-character">Select a Character - <span id="village">Konoha</span></h1>
+      <ul class="list-character" id="character-list">
+        <div class="list-character-konoha">
+          <!-- KONOHA START-->
+          <!-- TIME 7 -->
+          <li class="character select" id="naruto" data-name="Naruto Uzumaki"
+            data-description="Naruto Uzumaki é um shinobi de Konohagakure do clã Uzumaki. Desde seu nascimento, ele se tornou jinchūriki das Nove-Caudas, um destino que o levou a ser condenado e negligenciado por toda a aldeia durante sua infância. Depois de entrar para o Time 7, ao lado de Sakura Haruno, Sasuke Uchiha e sob comando de Kakashi Hatake, Naruto trabalhou duro para ganhar o respeito e o reconhecimento da aldeia, com o sonho de se tornar Hokage.">
+            <img src="./src/assets/card-naruto.jpg" alt="">
+          </li>
+          <li class="character" id="sakura" data-name="Sakura Haruno"
+            data-description="Sakura Haruno é uma kunoichi de nível jōnin do clã Haruno. Ela é designada como um membro do Time Kakashi, mas rapidamente encontra-se mal preparada para os deveres de um ninja e as complicações das vidas de seus companheiros de equipe. Treinando sob a tutela de sua mestra, Tsunade, ela se torna uma kunoichi mais forte e uma excelente ninja médica, sendo capaz de enfrentar os desafios de uma vida como um ninja, bem como ajudar e proteger seus amigos e entes queridos quando eles precisarem dela.">
+            <img src="./src/assets/card-sakura.jpg" alt="">
+          </li>
+          <li class="character" id="sasuke" data-name="Sasuke Uchiha"
+            data-description="Sasuke Uchiha é um dos últimos membros sobreviventes do clã Uchiha de Konohagakure, além de ser a reencarnação atual de Indra. Ele se tornou um shinobi para que pudesse algum dia ficar forte o suficiente para se vingar contra o seu irmão mais velho, Itachi, que tinha massacrado todo o seu clã. Inicialmente, um membro do Time Kakashi de Konoha, Sasuke desertou da aldeia para obter poder com Orochimaru, e mais tarde também se juntou a Akatsuki, tornando-se um criminoso internacional no processo.">
+            <img src="./src/assets/card-sasuke.jpg" alt="">
+          </li>
+          <li class="character" id="kakashi" data-name="Kakashi Hatake"
+            data-description="Kakashi Hatake é um shinobi de Konohagakure. Ele recebeu um Sharingan de seu ex-companheiro de equipe, Obito Uchiha, quando era mais jovem, fazendo-o ser conhecido como Kakashi o Ninja Copiador e Kakashi do Sharingan. Seu prodigioso talento, habilidades e destreza com o Sharingan fizeram dele um dos mais capazes ninjas da aldeia, sendo reconhecido em todo o mundo ninja. Ele acaba sendo nomeado como líder do Time Kakashi, onde ele usa seus anos de experiência para treinar seus alunos para se tornarem ninjas habilidosos de suas próprias maneiras.">
+            <img src="./src/assets/card-kakashi.jpg" alt="">
+          </li>
+          <!-- TIME 8 -->
+          <li class="character" id="hinata" data-name="Hinata Hyuuga"
+            data-description="Hinata Hyuuga é um membro dos clãs Hyuuga de Konohagakure. Tendo um temperamento humilde, a falta de auto-confiança de Hinata era refletida em suas habilidades — traços que fizeram seu pai considerar que ela não era adequada para a sua posição como herdeira do clã. A partir de suas observações com relação a Naruto Uzumaki, Hinata encontra tanto um exemplo a seguir para ser mais assertiva, como uma pessoa para amar.">
+            <img src="./src/assets/card-hinata.jpg" alt="">
+          </li>
+          <li class="character" id="kiba" data-name="Kiba Inuzuka"
+            data-description="Kiba Inuzuka é um membro do clã Inuzuka de Konohagakure. Tanto ele quanto seu companheiro canino, Akamaru, são membros do Time Kurenai. Kiba é frequentemente mal humorado e impulsivo (em contraste com seus companheiros de equipe, Shino e Hinata), e pode ser propenso a cometer erros quando ele fica agitado na batalha. Ele também gosta de combate, mesmo quando enfrenta adversários particularmente fortes.">
+            <img src="./src/assets/card-kiba.jpg" alt="">
+          </li>
+          <li class="character" id="shino" data-name="Shino Aburame"
+            data-description="Shino Aburame é um membro do clã Aburame de Konohagakure. Calmo e às vezes desanimador, Shino coloca seu talento único com insetos para usar em sua associação com o Time Kurenai. Nos anos posteriores, ele se torna um instrutor na Academia. Desde sua infância, Shino tem sido uma pessoa calma, recolhida e solitária, sendo bastante misterioso. Shino é retratado como sendo algo entre apenas estoico e matéria-de-fato, raramente sorrindo ou mostrando emoção.">
+            <img src="./src/assets/card-shino.jpg" alt="">
+          </li>
+          <li class="character" id="kurenai" data-name="Kurenai Yuhi"
+            data-description="Kurenai Yūhi é uma kunoichi de nível jōnin de Konohagakure. Ela também era a líder do Time Kurenai, que consiste em: Hinata Hyūga, Shino Aburame, Kiba Inuzuka e Akamaru. Kurenai é uma mulher inteligente, carinhosa e corajosa. Ela demonstra grande cuidado e preocupação com seus alunos e tem um grande interesse em seu crescimento, especialmente no que diz respeito a Hinata, devido ela saber muito bem como Hinata era vista por seu pai.">
+            <img src="./src/assets/card-kurenai.jpg" alt="">
+          </li>
+          <!-- TIME 9 -->
+          <li class="character" id="lee" data-name="Rock Lee"
+            data-description="Rock Lee é um shinobi de Konohagakure. Apesar de ele não ter certas habilidades tipicamente associadas com a vida como um ninja, Lee pretende compensar suas deficiências de qualquer maneira que puder. Recebendo treinamento especial a este respeito de seu professor, Might Guy, ele se torna um mestre em taijutsu e visa apenas ficar mais forte. Lee é extremamente enérgico, modesto, carismático e possuí excesso de entusiasmo. Apesar de sua natureza muito apaixonada, Lee também mostra fortes instintos, sempre estando focado nas missões que realiza, raramente perdendo a compostura, e notando a presença de pessoas ao seu redor, mesmo reconhecendo seus amigos.">
+            <img src="./src/assets/card-lee.jpg" alt="">
+          </li>
+          <li class="character" id="neji" data-name="Neji Hyuuga"
+            data-description="Neji Hyuuga foi um membro do clã Hyūga e um shinobi de Konohagakure. Embora tenha sido um prodígio mesmo pelos padrões dos Hyuuga, Neji era um membro da casa secundária; por isso, não importa quão habilidoso tornou-se, ele estaria sempre a serviço da casa principal Hyuuga, um fato que convenceu-o de que o destino era predeterminado. Depois de ver a recusa de Naruto Uzumaki de ser limitado por uma ideologia como esta, Neji percebeu que seu destino foi o que ele escolheu para si mesmo, e como um membro do Time Guy, ele buscou a força necessária para fazer o futuro que ele queria para sua família e amigos.">
+            <img src="./src/assets/card-neji.jpg" alt="">
+          </li>
+          <li class="character" id="tenten" data-name="TenTen"
+            data-description="Tenten é um membro do Time Guy de Konohagakure. Usando suas habilidades com armas, ela treina para ser uma poderosa kunoichi. Tenten acredita firmemente que uma kunoichi pode ser tão forte como um shinobi masculino. Durante o Exame Chūnin, Neji sugere que kunoichi não são tão boas em taijutsu, mas Tenten reprime ele, explicando que as meninas são tão boas quanto os meninos quando se trata de taijutsu. O sonho pessoal de Tenten é tornar-se uma ninja feminina poderosa e bem conhecida assim como Tsunade.">
+            <img src="./src/assets/card-tenten.jpg" alt="">
+          </li>
+          <li class="character" id="gai" data-name="Maito Gai"
+            data-description="Maito Gai é um jōnin de Konohagakure. Um mestre no taijutsu, ele leva e passa sua sabedoria para os membros do Time Guy. Conhecido por suas sobrancelhas grossas, macacão verde e corte de cabelo tigela brilhante, Guy, muitas vezes refere-se a si mesmo como Fera Sublime Verde de Konoha. Ele tem muitas manias exclusivas dele na série que se destinam a ser visto como cafona e antiquado, uma referência comum de clichês de juventude. Guy também é conhecido por falar sobre Chamas da Juventude.">
+            <img src="./src/assets/card-gai.jpg" alt="">
+          </li>
+          <!-- TIME 10 -->
+          <li class="character" id="shikamaru" data-name="Shikamaru Nara"
+            data-description="Shikamaru Nara é um membro do clã Nara de Konohagakure. Apesar de ser preguiçoso por natureza, Shikamaru tem um intelecto raro que constantemente lhe permite prevalecer em combate. As responsabilidades que esse intelecto gera para ele frequentemente o deixam aborrecido, mas ele as aceita de bom grado, para que possa estar a serviço de seus companheiros do Time Asuma, e para provar a si mesmo e às gerações do passado e do futuro o seu valor.">
+            <img src="./src/assets/card-shikamaru.jpg" alt="">
+          </li>
+          <li class="character" id="choji" data-name="Choji Akimichi"
+            data-description="Chōji Akimichi é um membro do clã Akimichi de Konohagakure. Embora seja sensível com relação ao seu peso, Chōji é, contudo, dedicado aos seus amigos, especialmente o Time Asuma. Chōji é uma pessoa muito gentil, educada e atenciosa. Essas características são ditas serem a sua maior força, tanto por seu pai, Chōza, como seu antigo professor, Asuma, enquanto sua maior fraqueza era a sua falta de auto-confiança. Ele é facilmente motivado pela perspectiva de comer, e se torna muito agitado quando alguém o chama de gordo (ele se refere a si mesmo como ossos grandes ou gordinho).">
+            <img src="./src/assets/card-choji.jpg" alt="">
+          </li>
+          <li class="character" id="ino" data-name="Ino Yamanaka"
+            data-description="Ino Yamanaka  é um membro do clã Yamanaka de Konohagakure. Ela e seus colegas do Time Asuma formam o Ino–Shika–Chō. Ino tende à assumir o controle de seus companheiros devido às suas naturezas preguiçosas e indiferentes, como quando ela sugere que Chōji deve perder peso ou que Shikamaru precisa parar de ficar acomodado. Ela, no entanto, se preocupa claramente com eles, como mostrado por seu alívio quando Chōji sobreviveu aos seus ferimentos fatais. Shikamaru, apesar de pensar que a maioria das meninas são problemáticas, normalmente não oferece resistência.">
+            <img src="./src/assets/card-ino.jpg" alt="">
+          </li>
+          <li class="character" id="asuma" data-name="Asuma Sarutobi"
+            data-description="Asuma Sarutobi foi um jōnin do clã Sarutobi de Konohagakure, assim como um ex-membro dos Doze Guardiões Ninja. Ele também foi o líder do Time Asuma, que consistia em Shikamaru Nara, Ino Yamanaka e Chōji Akimichi. Asuma era um indivíduo tipicamente descontraído, e não se envolvia em coisas que não fossem absolutamente necessárias, como visto quando ele decidiu não ajudar a salvar Hinata Hyuuga durante sua luta nos Exames Chūnin. Ele era um fumante inveterado, mas, apesar disso, ele interrompia abruptamente seu hábito em certas circunstâncias, como quando seu pai morreu.">
+            <img src="./src/assets/card-asuma.jpg" alt="">
+          </li>
+          <!-- KONOHA FIM -->
+          <!-- SAD START-->
+          <!-- TIME 7 -->
+          <li class="character" id="gaara" data-name="Sabaku no Gaara"
+            data-description="Gaara é um shinobi de Sunagakure. O Shukaku foi selado em seu corpo no dia de seu nascimento, um procedimento que resultou na morte de sua mãe. Considerado como um monstro pela vila e sem ninguém para amá-lo, Gaara passou a desprezar o mundo e começou contando apenas com sua própria força, ganhando o título de Gaara do Deserto. Este poder de auto-amor é mais tarde derrotado pela dedicação inabalável de Naruto Uzumaki por seus amigos. Desse ponto em diante, Gaara começa a seguir o método de Naruto e muda as opiniões de Sunagakure com relação a ele.">
+            <img src="./src/assets/card-gaara.jpg" alt="">
+          </li>
+          <li class="character" id="temari" data-name="Sabaku no Temari"
+            data-description="Temari é uma antiga kunoichi do clã dos Kazekage e emissária de Sunagakure. Temari é uma pessoa prudente, estoica, e contundente, que raramente fica com medo de falar o que pensa. Em Naruto, Temari mostrou grande desdém e traços cruéis quando seu irmão Gaara matou os membros do Time Shigure; onde ela simplesmente sorriu e acenou para eles antes de serem esmagados. Ela parece valorizar a paz, como ela questionou o raciocínio de começar uma guerra contra Konoha em Naruto. Durante o Exame Chūnin, revela-se que a única pessoa que ela tem medo era Gaara. ">
+            <img src="./src/assets/card-temari.jpg" alt="">
+          </li>
+          <li class="character" id="kankuro" data-name="Sabaku no Kankuro"
+            data-description="Kankurō é um shinobi de Sunagakure e um dos três Irmãos da Areia. Em Naruto, um traço notável de sua personalidade que ele demonstrou foi uma antipatia aparente para as crianças, visto pela primeira vez quando ele tentou bater em Konohamaru por este ter se esbarrado nele acidentalmente. Isto também era muitas vezes visto em suas interações com outros personagens, como ele ficava visivelmente irritado quando ficava na presença de alguém mais jovem do que ele. Isto foi mais evidente quando ele foi visto com Gaara, o qual Kankurō foi forçado a tolerar devido ao medo que seu irmão mais novo lhe causava.">
+            <img src="./src/assets/card-kankuro.jpg" alt="">
+          </li>
+          <li class="character" id="baki" data-name="Baki"
+            data-description="Baki é um shinobi de nível jōnin de Sunagakure, líder do time dos Irmãos da Areia e um membro do conselho consultivo da vila. Baki é um ninja leal e respeitado, embora, como muitos ninjas de Suna, ele é implacável e severo no campo de batalha, como todos eles são treinados para colocar a realização das missões em primeiro do que salvar seus companheiros de equipe. Com sua experiência em batalha, ele tem muita confiança em seu poder.">
+            <img src="./src/assets/card-baki.jpg" alt="">
+          </li>
+          <!-- SAD FIM-->
+          <!-- SAD START-->
+          <!-- TIME 7 -->
+          <li class="character" id="tsunade" data-name="Tsunade (Hokage)"
+            data-description="Tsunade é uma dos Sannin Lendários de Konohagakure. Embora seja considerada a kunoichi mais forte do mundo[8] e a maior ninja médica,[9] Tsunade abandonou a vida de shinobi por muitos anos em busca de outros objetivos. Ela acaba sendo convencida a voltar para Konoha e se torna a Quinta Hokage, onde ela usa sua força para reprimir os inimigos da vila e seu conhecimento médico para manter os moradores a salvo.">
+            <img src="./src/assets/card-tsunade.jpg" alt="">
+          </li>
+          <li class="character" id="gaa" data-name="Gaara (Kazekage)"
+            data-description="Gaara assumiu o cargo de Kazekage quatorze anos após o Ataque da Raposa de Nove Caudas em Konoha, ou seja, quando Naruto tinha 14 anos. O título de Kage é o mais importante em uma Vila Oculta. Ele é o líder militar e administrativo do local e como o cargo se estende por toda a vida ativa da pessoa, pode mudar por anos a vida dos habitantes. Geralmente é o ninja mais poderoso que assume essa posição e, por causa disso, não necessariamente o líder mais preparado é quem assume. Gaara é um exemplo disso. ">
+            <img src="./src/assets/card-gaa.jpg" alt="">
+          </li>
+          <li class="character" id="raikage" data-name="A (Raikage)"
+            data-description="A é o Quarto Raikage, Yondaime Raikage; que literalmente significa: Quarta Sombra do Relâmpago de Kumogakure. A é muito carinhoso e protetor para com seu irmão mais novo adotado, apesar de Killer B ser um jinchūriki, A chora com a notícia da captura de seu irmão mais novo pela Akatsuki. No entanto, quando A descobre o truque de Killer B em usar o acontecimento para ter um período de férias, ele fica comicamente furioso (mas não surpreso), e jura punir seu irmão mais novo por isso.">
+            <img src="./src/assets/card-raikage.jpg" alt="">
+          </li>
+          <li class="character" id="mei" data-name="Mei Terumī (Mizukage)"
+            data-description="Mei Terumī é a Quinta Mizukage de Kirigakure. Ela se tornou Mizukage nos últimos anos, depois do reinado terrível de Yagura terminar e tem trabalhado incansavelmente para recriar relações diplomáticas com outras aldeias, bem como as políticas internas de reforma. Mei é uma pessoa alegre e sorri mesmo quando jura matar Ao depois que ela troca o que ele diz. Ela é geralmente gentil e equilibrada, falando bem dos outros e tentando evitar o conflito. ">
+            <img src="./src/assets/card-mei.jpg" alt="">
+          </li>
+          <li class="character" id="onoki" data-name="Ōnoki (tsuchikage)"
+            data-description="Ōnoki, conhecido como Ōnoki das Escalas Ambas foi o Terceiro Tsuchikage de Iwagakure, que, eventualmente, se aposentou e deu a posição para a sua neta, Kurotsuchi. Ōnoki é um indivíduo muito orgulhoso, teimoso e arrogante. Por causa de sua idade, ele também é um pouco frágil, com constantes queixas sobre dores nas costas e no quadril.">
+            <img src="./src/assets/card-onoki.jpg" alt="">
+          </li>
+          <!-- AREIA FIM-->
+        </div>
+        </div>
       </ul>
+      <div class="carousel-navigation">
+        <button class="prev-btn" id="prev">PREV</button>
+        <button class="next-btn" id="next"><img class="next" src="./src/assets/uzumaki.gif" alt=""></button>
+      </div>
     </section>
     <section class="character-active">
-      <img class="character-big" src="./src/assets/card-ciclops.png" alt="">
+      <img class="character-big" src="./src/assets/card-naruto.png" alt="">
 
       <div class="info-character">
-        <h2 class="info-name-character" id="name-character">Cyclops</h2>
-        <p class="info-describes" id="describes-character">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis urna quis dolor convallis pharetra eget at velit.1</p>
+        <h2 class="info-name-character" id="name-character">Naruto Uzumaki</h2>
+        <div class="info-describes">
+          <p id="describes-character">
+            Naruto Uzumaki é um shinobi de Konohagakure do clã Uzumaki. Desde seu nascimento, ele se tornou jinchūriki
+            das
+            Nove-Caudas, um destino que o levou a ser negligenciado por toda a aldeia durante sua infância. Depois de
+            entrar para o Time 7, com Sakura Haruno, Sasuke Uchiha e sob comando de Kakashi Hatake, Naruto trabalhou
+            duro
+            para ganhar o respeito e o reconhecimento da aldeia, com o sonho de se tornar Hokage.
+          </p>
+        </div>
       </div>
     </section>
   </main>
   <script src="./src/js/index.js"></script>
+  <script src="./src/js/index2.js"></script>
+  <div class="credits">
+    <p>Descriptions: <a href="https://naruto.fandom.com/pt-br/wiki/Wiki_Naruto" target="_blank">Naruto Fandom</a></p>
+  </div>
 </body>
 
 </html>

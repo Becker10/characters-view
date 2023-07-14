@@ -3,9 +3,9 @@ const characters = document.querySelectorAll('.character');
 characters.forEach((character) => {
     character.addEventListener('mouseenter', () => {
 
-        if (window.innerWidth < 450) {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
+        // if (window.innerWidth < 450) {
+        //     window.scrollTo({top: 0, behavior: 'smooth'});
+        // }
 
         removeSelectionCharacter();
 

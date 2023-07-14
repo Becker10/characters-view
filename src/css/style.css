@@ -1,8 +1,10 @@
 body {
-    font-family: "Oxanium" , cursive;
+    font-family: "NarutoV2", cursive;
     background-color: #000000;
     color: #ffffff;
+    font-weight: lighter !important;
 }
+
 body::before {
     content: "";
     background-image: url(../assets/bg-desktop.jpg);
@@ -15,39 +17,96 @@ body::before {
     z-index: -1;
     opacity: 0.2;
 }
+
 .initial {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.initial .logo {
+    width: 19%;
+}
+
+.initial .logo:hover {
+    transform: scale(1.5);
+}
+
 .character-select {
     display: flex;
     align-items: center;
     gap: 30px;
-    min-height: calc(100vh - 152px);
+    min-height: calc(100vh - 230px);
     justify-content: center;
 }
+
 .character-select .characters {
     display: flex;
     align-items: center;
     flex-direction: column;
-    max-width: 585px;
+    max-width: 700px;
     gap: 25px;
 }
-.character-select .characters .title-character{
+
+.character-select .characters .title-character {
     font-size: 20px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     font-weight: bold;
-    border-bottom: 2px solid #47f4ff;
+    border-bottom: 2px solid #ff0202;
     width: 100%;
-    /* text-align: center; */
+    padding-bottom: 2vh;
 }
+
+.character-select .characters .title-character span{
+    font-size: 35px;
+}
+
 .character-select .list-character {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     justify-content: center;
+}
+
+.character-select .list-character-konoha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.list-character-konoha.page-1 {
+    background-image: url(../assets/konoha_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Cor de fundo para a página 1 */
+}
+
+.list-character-konoha.page-2 {
+    background-image: url(../assets/sand_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Cor de fundo para a página 2 */
+}
+
+.list-character-konoha.page-3 {
+    background-image: url(../assets/kages_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Cor de fundo para a página 3 */
+}
+
+.list-character .character {
+    width: 10%;
 }
 
 .list-character .character img {
@@ -55,26 +114,102 @@ body::before {
     height: 100%;
 }
 
-.list-character .character.select{
-    box-shadow: 0px 0px 24px 5px #0271f7;
+.list-character .character.select {
+    box-shadow: 0px 0px 20px 3px #ff0202;
+    transform: scale(1.1);
 }
+
 .character-active {
     text-align: center;
     max-height: 530px;
 }
-.character-active .character-big{
-    width: 430px;
-    height: 430px;
+
+.character-active .character-big {
+    width: 400px;
+    height: 400px;
 }
-.character-active .info-name-character{
-    border-bottom: 2px solid #47f4ff;
+
+.character-active .info-name-character {
+    border-bottom: 2px solid #ff0202;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+    padding-bottom: 2vh;
 }
-.character-active .info-describes{
-    font-size: 16px;
+
+.character-active .info-describes {
+    font-size: 14px;
     line-height: 22px;
-    text-align: center;
+    text-align: justify;
     margin-top: 20px;
-    width: 420px;
+    width: 590px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: #000000;
+    padding: 20px 45px 20px 45px;
+    max-height: 100px;
+    border-radius: 30px;
+    overflow-y: scroll;
+    background-image: url(../assets/parch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-right: 2vh;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.next {
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+}
+
+#prev {
+    display: none;
+}
+
+.credits {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2vh;
+    margin-top: 2vh !important;
+}
+
+.credits p {
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.credits p a {
+    text-decoration: none;
+    color: #ff0202;
 }
