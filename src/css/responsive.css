@@ -2,35 +2,55 @@
     .initial .logo {
         max-width: 190px;
     }
+
     .character-select {
         flex-direction: column-reverse;
         max-width: 430px;
         margin: 0 auto;
     }
-    .character-select .characters{
+
+    .character-select .characters {
         margin-top: 37px;
     }
-    .character-select .characters .title-character{
+
+    .character-select .characters .title-character {
         font-size: 15px;
     }
+
     .character-select .list-character {
         gap: 9px;
     }
-    .list-character .character{
+
+    .list-character .character {
         width: auto;
     }
-    .character-select .character img{
+
+    .character-select .character img {
         width: 80px;
     }
-    .character-active .character-big{
+
+    .character-active .character-big {
         width: 350px;
         height: 350px;
     }
-    .character-active .info-describes{
+
+    .character-active .info-describes {
         width: 90%;
         font-size: 16px;
         margin: 20px auto;
         max-height: 150px;
         text-align: center;
+    }
+}
+
+@media (max-width: 1560px) and (max-height: 752px) {
+    .character-active .character-big {
+        width: 350px;
+        height: 350px;
+    }
+
+    .character-active .info-describes {
+        padding: 10px 45px 45px 45px;
+        max-height: 110px;
     }
 }
