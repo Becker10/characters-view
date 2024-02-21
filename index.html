@@ -16,11 +16,21 @@
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="./src/css/responsive.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <header class="initial">
     <img class="logo" src="./src/assets/logo.svg" alt="logo">
+    <button class="btn-sound" id="toggleButton" onclick="toggleAudio()">
+      <img id="playPauseIcon" src="./src/assets/play.png" alt="Play">
+    </button>
+    <audio id="audio" loop>
+      <source src="./src/assets/sonds/hotaru.mp3" type="audio/mp3">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
   </header>
 
   <main class="character-select">
@@ -99,7 +109,6 @@
           </li>
           <!-- KONOHA FIM -->
           <!-- SAD START-->
-          <!-- TIME 7 -->
           <li class="character" id="gaara" data-name="Sabaku no Gaara"
             data-description="Gaara é um shinobi de Sunagakure. O Shukaku foi selado em seu corpo no dia de seu nascimento, um procedimento que resultou na morte de sua mãe. Considerado como um monstro pela vila e sem ninguém para amá-lo, Gaara passou a desprezar o mundo e começou contando apenas com sua própria força, ganhando o título de Gaara do Deserto. Este poder de auto-amor é mais tarde derrotado pela dedicação inabalável de Naruto Uzumaki por seus amigos. Desse ponto em diante, Gaara começa a seguir o método de Naruto e muda as opiniões de Sunagakure com relação a ele.">
             <img src="./src/assets/card-gaara.jpg" alt="">
@@ -116,11 +125,14 @@
             data-description="Baki é um shinobi de nível jōnin de Sunagakure, líder do time dos Irmãos da Areia e um membro do conselho consultivo da vila. Baki é um ninja leal e respeitado, embora, como muitos ninjas de Suna, ele é implacável e severo no campo de batalha, como todos eles são treinados para colocar a realização das missões em primeiro do que salvar seus companheiros de equipe. Com sua experiência em batalha, ele tem muita confiança em seu poder.">
             <img src="./src/assets/card-baki.jpg" alt="">
           </li>
+          <li class="character" id="chiyo" data-name="Chiyo"
+            data-description="Chiyo era uma mestre de renome no Técnica de Marionetes, famosa por suas habilidades, tanto na criação e na capacidade de controlá-los, a ponto de ser um ícone de valos inestimável para Sunagakure. Ela passou essas habilidades para seu neto, Sasori, alegando que sua técnica era tradicional em sua família. Ela modificou dois bonecos normais desarmados em bonecos capacidades intensas de batalha, até o ponto onde eles eram capazes de levantar-se contra o Terceiro Kazekage (conhecido como o mais forte na história de Sunagakure), que foi convertido em uma marionete humana por Sasori.">
+            <img src="./src/assets/card-chiyo.jpg" alt="">
+          </li>
           <!-- SAD FIM-->
-          <!-- SAD START-->
-          <!-- TIME 7 -->
+          <!-- KAGES START-->
           <li class="character" id="tsunade" data-name="Tsunade (Hokage)"
-            data-description="Tsunade é uma dos Sannin Lendários de Konohagakure. Embora seja considerada a kunoichi mais forte do mundo[8] e a maior ninja médica,[9] Tsunade abandonou a vida de shinobi por muitos anos em busca de outros objetivos. Ela acaba sendo convencida a voltar para Konoha e se torna a Quinta Hokage, onde ela usa sua força para reprimir os inimigos da vila e seu conhecimento médico para manter os moradores a salvo.">
+            data-description="Tsunade é uma dos Sannin Lendários de Konohagakure. Embora seja considerada a kunoichi mais forte do mundo[8] e a maior ninja médica, Tsunade abandonou a vida de shinobi por muitos anos em busca de outros objetivos. Ela acaba sendo convencida a voltar para Konoha e se torna a Quinta Hokage, onde ela usa sua força para reprimir os inimigos da vila e seu conhecimento médico para manter os moradores a salvo.">
             <img src="./src/assets/card-tsunade.jpg" alt="">
           </li>
           <li class="character" id="gaa" data-name="Gaara (Kazekage)"
@@ -139,7 +151,53 @@
             data-description="Ōnoki, conhecido como Ōnoki das Escalas Ambas foi o Terceiro Tsuchikage de Iwagakure, que, eventualmente, se aposentou e deu a posição para a sua neta, Kurotsuchi. Ōnoki é um indivíduo muito orgulhoso, teimoso e arrogante. Por causa de sua idade, ele também é um pouco frágil, com constantes queixas sobre dores nas costas e no quadril.">
             <img src="./src/assets/card-onoki.jpg" alt="">
           </li>
-          <!-- AREIA FIM-->
+          <!-- KAGES FIM-->
+          <!-- AKATSUKI START-->
+          <li class="character" id="pain" data-name="Pain (Nagato Uzumaki)"
+            data-description="Pain é o líder da Akatsuki durante a maior parte da série. Ele possui habilidades de controle sobre a dor e o chakra, e é conhecido por seus Seis Caminhos da Dor, que são seis corpos controlados remotamente por ele.">
+            <img src="./src/assets/card-pain.jpg" alt="">
+          </li>
+          <li class="character" id="konan" data-name="Konan"
+            data-description="Konan é uma kunoichi habilidosa que possui a habilidade de manipular papéis explosivos. Ela é uma leal seguidora de Pain e é conhecida por sua determinação e lealdade à Akatsuki.">
+            <img src="./src/assets/card-konan.jpg" alt="">
+          </li>
+          <li class="character" id="itachi" data-name="Itachi Uchiha"
+            data-description="Um dos personagens mais misteriosos e complexos de Naruto. Itachi foi membro da Akatsuki para proteger sua vila e seu irmão mais novo, Sasuke, embora suas verdadeiras motivações só sejam reveladas mais tarde na história. Ele é conhecido por suas habilidades avançadas do Sharingan e por sua maestria em genjutsu e taijutsu.">
+            <img src="./src/assets/card-itachi.jpg" alt="">
+          </li>
+          <li class="character" id="kisame" data-name="Kisame Hoshigaki"
+            data-description="Conhecido como o Demônio da Névoa, Kisame é um ninja da Vila Oculta da Névoa e parceiro de Itachi na Akatsuki. Ele possui uma quantidade imensa de chakra e é capaz de se fundir com sua espada Samehada, que absorve chakra.">
+            <img src="./src/assets/card-kisame.jpg" alt="">
+          </li>
+          <li class="character" id="deidara" data-name="Deidara"
+            data-description="Um artista explosivo que acredita que a verdadeira arte é a explosão. Ele cria bombas de argila que podem ser moldadas em diferentes formas e tamanhos, detonando-as com o uso de seu Kekkei Genkai, a Liberação de Explosão.">
+            <img src="./src/assets/card-deidara.jpg" alt="">
+          </li>
+          <li class="character" id="sasori" data-name="Sasori"
+            data-description="Um mestre marionetista que se transformou em uma marionete humana através de experimentos proibidos. Ele é conhecido por criar marionetes complexas e poderosas, bem como por sua habilidade em manipulá-las em batalha.">
+            <img src="./src/assets/card-sasori.jpg" alt="">
+          </li>
+          <li class="character" id="hidan" data-name="Hidan"
+            data-description="Um fanático seguidor da religião Jashin, que prega o culto ao deus da morte. Hidan possui a habilidade de imortalidade, mas para ativá-la, ele precisa beber o sangue de seus oponentes em um ritual sangrento.">
+            <img src="./src/assets/card-hidan.jpg" alt="">
+          </li>
+          <li class="character" id="kakuzu" data-name="Kakuzu"
+            data-description="Um ninja ganancioso e calculista que pode estender sua vida ao roubar corações de outros ninjas. Ele também possui a habilidade de usar múltiplos elementos, tornando-o um oponente formidável em combate.">
+            <img src="./src/assets/card-kakuzu.jpg" alt="">
+          </li>
+          <li class="character" id="zetsu" data-name="Zetsu"
+            data-description="Uma entidade dividida em Zetsu Branco e Zetsu Preto. Zetsu possui a habilidade de se fundir com a natureza, podendo se camuflar em ambientes naturais. Ele é encarregado de tarefas de espionagem e recuperação de corpos para a Akatsuki.">
+            <img src="./src/assets/card-zetsu.jpg" alt="">
+          </li>
+          <li class="character" id="tobi" data-name="Tobi (Obito Uchiha)"
+            data-description="Inicialmente se apresentando como Tobi, ele é posteriormente revelado como Obito Uchiha, antigo companheiro de equipe de Kakashi Hatake e supostamente morto durante a Terceira Grande Guerra Ninja. Tobi é um dos principais antagonistas da série, desempenhando um papel fundamental nos eventos que levaram à formação da Akatsuki.">
+            <img src="./src/assets/card-tobi.jpg" alt="">
+          </li>
+          <li class="character" id="orochimaru" data-name="Orochimaru (Ex Integrante)"
+            data-description="Um dos Sannin lendários de Konoha, Orochimaru é um ninja extremamente poderoso e sinistro, obcecado pela busca da imortalidade e pelo domínio de todas as técnicas ninja. Ele foi membro da Akatsuki por um curto período de tempo antes de ser expulso devido a conflitos internos.">
+            <img src="./src/assets/card-orochimaru.jpg" alt="">
+          </li>
+          <!-- AKATSUKI FIM-->
         </div>
         </div>
       </ul>
@@ -168,6 +226,24 @@
   </main>
   <script src="./src/js/index.js"></script>
   <script src="./src/js/index2.js"></script>
+  <script>
+    var audio = document.getElementById("audio");
+    var playPauseIcon = document.getElementById("playPauseIcon");
+
+    audio.volume = 0.3;
+  
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        playPauseIcon.src = "./src/assets/pause.png";
+        playPauseIcon.alt = "Pause";
+      } else {
+        audio.pause();
+        playPauseIcon.src = "./src/assets/play.png";
+        playPauseIcon.alt = "Play";
+      }
+    }
+  </script>
   <div class="credits">
     <p>Descriptions: <a href="https://naruto.fandom.com/pt-br/wiki/Wiki_Naruto" target="_blank">Naruto Fandom</a></p>
   </div>

@@ -1,10 +1,10 @@
 const characterList = document.getElementById('character-list');
 const prevButton = document.querySelector('.prev-btn');
 const nextButton = document.querySelector('.next-btn');
-const charactersPerPage = [16, 4, 6]; // Número de personagens exibidos por página
+const charactersPerPage = [16, 5, 5, 11]; // Número de personagens exibidos por página
 let currentPage = 0;
 
-const villageNames = ['Konoha', 'Sand', 'Kages'];
+const villageNames = ['Konoha', 'Sand', 'Kages', 'Akatsuki'];
 
 // Função para exibir a página atual
 function showCharacters(page) {
